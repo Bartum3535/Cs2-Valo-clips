@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bartu'nun en iyi CS2 ve VALORANT klipleri." />
+  <title>Bartu | Best CS2 & VALORANT Clips</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top">BARTU<span>.</span></a>
+    <nav>
+      <a href="#clips">Clips</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="github" href="#clips">WATCH CLIPS ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CS2 / VALORANT / BEST MOMENTS</p>
+        <h1>MY BEST<br><span>CLIPS.</span></h1>
+        <p class="subtext">Kendi en iyi CS2 ve VALORANT anlarım. Headshot, clutch, ace ve tamamen gereksiz özgüven.</p>
+        <a class="cta" href="#clips">KLİPLERE GİT <span>↓</span></a>
+      </div>
+      <div class="hero-side">
+        <div class="stat-card">
+          <span>GAMES</span>
+          <strong>02</strong>
+        </div>
+        <div class="stat-card">
+          <span>HIGHLIGHTS</span>
+          <strong id="heroCount">06</strong>
+        </div>
+        <div class="vertical-text">BARTU / 2026</div>
+      </div>
+    </section>
+
+    <section class="clips-section" id="clips">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SELECTED FOOTAGE</p>
+          <h2>HIGHLIGHTS</h2>
+        </div>
+        <div class="filters" role="tablist" aria-label="Klip filtresi">
+          <button class="filter active" data-filter="all">ALL</button>
+          <button class="filter" data-filter="cs2">CS2</button>
+          <button class="filter" data-filter="valo">VALORANT</button>
+        </div>
+      </div>
+
+      <div class="clip-grid" id="clipGrid"></div>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <p class="eyebrow">ABOUT THIS SITE</p>
+        <h2>NO EXCUSES.<br>JUST CLIPS.</h2>
+      </div>
+      <p>Klip eklemek için videonu <code>clips</code> klasörüne at ve adını <code>cs2-01.mp4</code> veya <code>valo-01.mp4</code> şeklinde koy. <code>script.js</code> dosyasına hiç dokunmana gerek yok; site videoları otomatik bulur.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 BARTU</span>
+    <span>CS2 × VALORANT</span>
+  </footer>
+
+  <div class="modal hidden" id="videoModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-content">
+      <button class="close" id="closeModal" aria-label="Kapat">×</button>
+      <div class="modal-video-wrap">
+        <video id="modalVideo" controls playsinline></video>
+      </div>
+      <div class="modal-meta">
+        <span id="modalGame">CS2</span>
+        <h3 id="modalTitle">Clip title</h3>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
